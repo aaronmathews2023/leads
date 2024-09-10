@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/otp_verification/widgets/pinput.dart';
 import 'package:leads/routes/app_route.dart';
+
 import 'package:pinput/pinput.dart';
+
+import '../login_screen/widgets/custombutton.dart';
 
 class ScreenOtpVerify extends StatelessWidget {
   final String phoneNumber;
@@ -28,12 +32,12 @@ class ScreenOtpVerify extends StatelessWidget {
                 children: [
                   Text(
                     "OTP Verification",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    style: AppTextStyles.h1(),
                   ),
                   SizedBox(height: 8),
                   Text(
                     "OTP has been sent to",
-                    style: TextStyle(fontSize: 15, color: Colors.grey[600]),
+                    style: AppTextStyles.h2(),
                   ),
                   Text(
                     ' $phoneNumber',
@@ -61,29 +65,16 @@ class ScreenOtpVerify extends StatelessWidget {
                 // Handle OTP changes if needed
               },
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30),
-              child: Container(
-                width: size.width * 0.75,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(
-                        context,
-                        AppRotes.BOTTOMFIRSTPPAGE,
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: Text(
-                      "Verify",
-                      style: TextStyle(color: Colors.white),
-                    )),
-              ),
-            )
+            CustomButton(
+              label: 'Verify',
+              width: size.width * 0.75,
+              onPressed: () {
+                Navigator.pushReplacementNamed(
+                  context,
+                  AppRotes.BOTTOMFIRSTPPAGE,
+                );
+              },
+            ),
           ],
         ),
       ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:leads/core/theme/text_styles/app_text_styles.dart';
+import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/textformfield.dart';
-import 'package:leads/presentation/pages/authentication/otp_verification/screen_otp_verify.dart';
 import 'package:leads/routes/app_route.dart';
+
 import 'package:leads/validation/common_validation.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -25,14 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
           Center(
             child: Column(
               children: [
-                Text(
-                  "Enter your Moblie Number",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "you will recieve an OTP to verify your number",
-                  style: TextStyle(fontSize: 15),
-                )
+                Text("Enter your Moblie Number", style: AppTextStyles.h1()),
+                Text("you will recieve an OTP to verify your number",
+                    style: AppTextStyles.h2())
               ],
             ),
           ),
@@ -43,32 +40,18 @@ class _LoginScreenState extends State<LoginScreen> {
               validator: validateMobileNumber,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 30),
-            child: Container(
-              width: size.width * 0.75,
-              child: ElevatedButton(
-                  onPressed: () {
-                    if (formkey.currentState?.validate() ?? false) {
-                      Navigator.pushNamed(
-                        context,
-                        AppRotes.OTPVERIFY,
-                        arguments: phonecontroller.text,
-                      );
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.redAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      // Rounded corners
-                    ),
-                  ),
-                  child: Text(
-                    "Send OTP",
-                    style: TextStyle(color: Colors.white),
-                  )),
-            ),
+          CustomButton(
+            label: "Send OTP",
+            width: size.width * 0.75,
+            onPressed: () {
+              if (formkey.currentState?.validate() ?? false) {
+                Navigator.pushNamed(
+                  context,
+                  AppRotes.OTPVERIFY,
+                  arguments: phonecontroller.text,
+                );
+              }
+            },
           )
         ],
       ),
