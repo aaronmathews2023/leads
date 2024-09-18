@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
+      theme: ThemeData.dark(),
       initialRoute: AppRotes.SPLASH, // Set the initial route
       onGenerateRoute: AppRotes.generateRoute,
     );

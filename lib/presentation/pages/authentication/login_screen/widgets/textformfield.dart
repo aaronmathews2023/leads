@@ -23,9 +23,6 @@ class CustomPhoneNumberField extends StatelessWidget {
 
         keyboardType: TextInputType.phone, // Use phone keyboard type
         decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: grey),
-          ),
           labelText: hintText,
           labelStyle: TextStyle(color: grey),
           prefixIcon: Icon(

@@ -28,7 +28,7 @@ class splash_image extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Center(
-        child: Image.asset(images.splashimage,// Replace with your image asset
+        child: Image.asset(Images.splashimage,// Replace with your image asset
           width: 450, // Adjust size as necessary
           height: 450,
         ),

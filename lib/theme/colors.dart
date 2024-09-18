@@ -7,3 +7,4 @@ const black = Colors.black;
 const red = Colors.red;
 const grey = Colors.grey;
 const blue = Colors.blue;
+const white = Colors.white;

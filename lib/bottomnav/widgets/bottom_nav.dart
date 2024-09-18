@@ -8,11 +8,11 @@ CurvedNavigationBar bottomNav(BuildContext context) {
     index: 0,
     height: 60.0,
     items: const <Widget>[
-      Icon(Icons.home, size: 30, color: black),
-      Icon(Icons.search, size: 30, color: black),
-      Icon(Icons.add, size: 30, color: black),
-      Icon(Icons.chat, size: 30, color: black),
-      Icon(Icons.person, size: 30, color: black),
+      Icon(Icons.home, size: 30, color: white),
+      Icon(Icons.search, size: 30, color: white),
+      Icon(Icons.add, size: 30, color: white),
+      Icon(Icons.chat, size: 30, color: white),
+      Icon(Icons.person, size: 30, color: white),
     ],
     color:
         Theme.of(context).brightness == Brightness.light ? whiteColor : black,

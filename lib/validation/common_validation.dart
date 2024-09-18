@@ -16,7 +16,7 @@ String? validateMobileNumber(String? number) {
       RegExp(r'^[6-9]\d{9}$'); // Must start with 6-9 and be 10 digits long
 
   if (!regex.hasMatch(cleanedNumber)) {
-    return 'Invalid mobile number format. Must be 10 digits.';
+    return ' Must be 10 digits.';
   }
 
   return null; // Return null if validation passes
