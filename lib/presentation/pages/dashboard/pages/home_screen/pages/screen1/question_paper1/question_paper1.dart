@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/widget/option_tile.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/question_paper1/widget/option_tile.dart';
 import 'package:leads/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
@@ -56,7 +56,7 @@ class _QuestionPaper1State extends State<QuestionPaper1> {
               const SizedBox(height: 20),
               const Align(
                 alignment: Alignment.centerRight,
-                child:  Icon(
+                child: Icon(
                   Icons.bookmark_outline,
                   size: 30,
                 ),
@@ -75,13 +75,24 @@ class _QuestionPaper1State extends State<QuestionPaper1> {
               ),
               const SizedBox(height: 20),
               const OptionTile(
-                  option: "A. Which psychologist is most", isSelected: false),
+                option: "Which psychologist is most",
+                isSelected: false,
+                index: "A",
+              ),
               const OptionTile(
-                  option: "B. Which psychologist is most", isSelected: true),
+                  option: "Which psychologist is most",
+                  isSelected: true,
+                  index: "B"),
               const OptionTile(
-                  option: "C. Which psychologist is most", isSelected: false),
+                option: "Which psychologist is most",
+                isSelected: false,
+                index: "C",
+              ),
               const OptionTile(
-                  option: "D. Which psychologist is most", isSelected: false),
+                option: "D. Which psychologist is most",
+                isSelected: false,
+                index: "D",
+              ),
               const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,8 +107,8 @@ class _QuestionPaper1State extends State<QuestionPaper1> {
                     onPressed: () {
                       Navigator.pushNamed(context, AppRotes.EXAMRESULT);
                     },
-                    child:
-                        const Text("Mark of review", style: TextStyle(color: white)),
+                    child: const Text("Mark of review",
+                        style: TextStyle(color: white)),
                   )
                 ],
               )

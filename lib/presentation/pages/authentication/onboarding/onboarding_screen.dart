@@ -40,7 +40,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             onPressed: () {
               Navigator.pushNamed(
                 context,
-                AppRotes.LOGIN,
+                AppRotes.HOMESCREEN,
               );
             },
             label: "Let's GO",

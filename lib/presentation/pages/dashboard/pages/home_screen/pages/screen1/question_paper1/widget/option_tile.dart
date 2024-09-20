@@ -4,7 +4,12 @@ import 'package:leads/theme/colors.dart';
 class OptionTile extends StatelessWidget {
   final String option;
   final bool isSelected;
-  const OptionTile({super.key, required this.option, required this.isSelected});
+  final String index;
+  const OptionTile(
+      {super.key,
+      required this.option,
+      required this.isSelected,
+      required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +22,20 @@ class OptionTile extends StatelessWidget {
           border: Border.all(color: Colors.black)),
       child: Row(
         children: [
-          Icon(
-            isSelected
-                ? Icons.radio_button_checked
-                : Icons.radio_button_unchecked,
-            color: white,
+          CircleAvatar(
+            child: Text(
+              index,
+              style: TextStyle(color: isSelected ? black : white),
+            ),
+            backgroundColor: isSelected ? white : black,
           ),
-          const SizedBox(width: 10),
+          // Icon(
+          //   isSelected
+          //       ? Icons.radio_button_checked
+          //       : Icons.radio_button_unchecked,
+          //   color: white,
+          // ),
+          SizedBox(width: 10),
           Expanded(
               child: Text(
             option,

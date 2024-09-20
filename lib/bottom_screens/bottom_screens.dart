@@ -1,9 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:leads/bottomnav/screen_nav.dart';
 import 'package:leads/theme/colors.dart';
 
-CurvedNavigationBar bottomNav(BuildContext context) {
+CurvedNavigationBar bottomNav(BuildContext context, void Function(int)? onTap) {
   return CurvedNavigationBar(
     index: 0,
     height: 60.0,
@@ -23,8 +22,6 @@ CurvedNavigationBar bottomNav(BuildContext context) {
         : Colors.black,
     animationCurve: Curves.easeInOut,
     animationDuration: const Duration(milliseconds: 600),
-    onTap: (index) {
-      currentPage.value = index;
-    },
+    onTap: onTap,
   );
 }

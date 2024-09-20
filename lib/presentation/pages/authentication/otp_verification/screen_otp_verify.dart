@@ -73,7 +73,7 @@ class ScreenOtpVerify extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacementNamed(
                   context,
-                  AppRotes.BOTTOMFIRSTPPAGE,
+                  AppRotes.PRACTICE,
                 );
               },
             ),

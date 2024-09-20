@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:leads/core/theme/text_styles/app_text_styles.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/widget/screen1_widget.dart';
-import 'package:leads/routes/app_route.dart';
-import 'package:leads/theme/colors.dart';
 
-class Screen1 extends StatelessWidget {
-  const Screen1({super.key});
+import 'package:leads/routes/app_route.dart';
+
+import 'widgets/grid_tile.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +13,15 @@ class Screen1 extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.white),
-            onPressed: () {},
-          ),
-          title: Text("Exams", style: TextStyle(color: Colors.white)),
+          automaticallyImplyLeading: false,
+          // leading: IconButton(
+          //   icon: const Icon(Icons.arrow_back, color: Colors.white),
+          //   onPressed: () {},
+          // ),
+          title: const Text("Exams", style: TextStyle(color: Colors.white)),
           actions: [
             IconButton(
-              icon: Icon(Icons.language, color: Colors.white),
+              icon: const Icon(Icons.language, color: Colors.white),
               onPressed: () {},
             ),
           ],
@@ -32,7 +33,7 @@ class Screen1 extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                     hintText: "Kerala State RTO Learners Exam",
-                    suffixIcon: Icon(Icons.search),
+                    suffixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -44,32 +45,55 @@ class Screen1 extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 childAspectRatio: 1 / 1.7,
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 children: [
-                  DashboardGridTile(
-                    title: 'LEARNERS\nPRATICE',
-                    subtitle: 'Test your knowledge  stress free',
-                    imagePath: "",
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRotes.LOGIN);
+                    },
+                    child: const HomeScreenGridTile(
+                      text2color: Color(0xffFF5F69),
+                      text1: "LEARNERS",
+                      text2: 'PARCTICE',
+                      subtitle: 'Test your knowledge  stress free',
+                      imagePath: "",
+                    ),
                   ),
                   InkWell(
                     onTap: () {
                       Navigator.pushReplacementNamed(
                           context, AppRotes.MODELEXAM);
                     },
-                    child: DashboardGridTile(
-                      title: 'MODEL\nEXAM',
+                    child: const HomeScreenGridTile(
+                      text1: 'MODEL',
+                      text2: 'EXAM',
+                      text2color: Color(0xffF7B951),
                       subtitle: 'Time-bound test similar to Exam',
                       imagePath: "",
                     ),
                   ),
-                  DashboardGridTile(
-                      title: 'QUESTION\nBANK',
-                      subtitle: 'Question Bank',
-                      imagePath: ''),
-                  DashboardGridTile(
-                      title: 'DAILY',
-                      subtitle: 'Time-bound test similar to Exam',
-                      imagePath: '')
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRotes.QBANK);
+                    },
+                    child: const HomeScreenGridTile(
+                        text2color: Color(0xffFF5F69),
+                        text1: 'QUESTION',
+                        text2: 'BANK',
+                        subtitle: 'Question Bank',
+                        imagePath: ''),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRotes.QUIZ);
+                    },
+                    child: const HomeScreenGridTile(
+                        text2color: Color(0xff3660B0),
+                        text1: 'DAILY',
+                        text2: 'QUIZ',
+                        subtitle: 'Time-bound test similar to Exam',
+                        imagePath: ''),
+                  )
                 ],
               ),
             )
@@ -80,7 +104,7 @@ class Screen1 extends StatelessWidget {
           selectedItemColor: Colors.redAccent,
           unselectedItemColor: Colors.white,
           currentIndex: 0,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.check_circle_outline),
               label: 'Driving License Criteria',

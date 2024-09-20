@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:leads/theme/colors.dart';
 
-class DashboardGridTile extends StatelessWidget {
-  const DashboardGridTile(
+class HomeScreenGridTile extends StatelessWidget {
+  const HomeScreenGridTile(
       {super.key,
-      required this.title,
       required this.subtitle,
-      required this.imagePath
-    });
-  final String title, subtitle, imagePath;
+      required this.imagePath,
+      required this.text1,
+      required this.text2,
+      required this.text2color});
+  final String subtitle, imagePath, text1, text2;
+  final Color text2color;
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +31,25 @@ class DashboardGridTile extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Expanded(
-              flex: 1,
+            Container(
+              width: double.infinity,
+              color: Color(0xffAED5F7),
               child: Text(
-                title,
+                text1,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
-                    color: Colors.blue),
+                    color: Color(0xff003179)),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Container(
+              width: double.maxFinite,
+              color: text2color,
+              child: Text(
+                text2,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, fontSize: 20, color: white),
                 textAlign: TextAlign.center,
               ),
             ),

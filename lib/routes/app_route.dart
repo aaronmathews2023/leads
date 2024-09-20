@@ -1,17 +1,27 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:leads/bottomnav/screen_nav.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/login_screen.dart';
 import 'package:leads/presentation/pages/authentication/onboarding/onboarding_screen.dart';
 import 'package:leads/presentation/pages/authentication/otp_verification/screen_otp_verify.dart';
 import 'package:leads/presentation/pages/authentication/splash_screen/splash_screen.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/exam_result.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/instructions.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/modelexam.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/question_paper1.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/screen1.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/Solultions/solution.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/daily_quiz/daily_quiz.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/daily_quiz_result/daily_result.dart';
+
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/exam_result/exam_result.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/instructions.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/learners_partice/learners_partice.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/modelexam/modelexam.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/question_paper1/question_paper1.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/questionbank/questionbank.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/quiz_solution/quiz_solution.dart';
 import 'package:leads/presentation/pages/screen2/screen2.dart';
 import 'package:leads/presentation/pages/screen3/screen3.dart';
 import 'package:leads/presentation/pages/screen4/screen4.dart';
+
+import '../presentation/pages/dashboard/dash_screen.dart';
+import '../presentation/pages/dashboard/pages/home_screen/home_screen.dart';
 
 class AppRotes {
   static const String SPLASH = '/';
@@ -20,13 +30,19 @@ class AppRotes {
   static const String OTPVERIFY = '/otpscreen';
   static const String INSTRUCTION = '/instruction';
   static const String BOTTOMFIRSTPPAGE = '/bottomfirstpage';
-  static const String SCREEN1 = '/screen1';
+  static const String HOMESCREEN = '/homescreen';
   static const String SCREEN2 = '/screen2';
   static const String SCREEN3 = '/screen3';
   static const String SCREEN4 = '/screen4';
   static const String MODELEXAM = '/Modelexam';
   static const String QUESTION = '/Qusetion';
   static const String EXAMRESULT = '/Examresult';
+  static const String SOLUTION = '/solution';
+  static const String QBANK = '/qbank';
+  static const String QUIZ = '/quiz';
+  static const String DAILYRESULT = '/dailyresult';
+  static const String QUIZSOLUTION ="/quizsolution";
+  static const String PRACTICE ="/pratice";
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -50,16 +66,27 @@ class AppRotes {
       case EXAMRESULT:
         return MaterialPageRoute(builder: (_) => ExamResult());
       case BOTTOMFIRSTPPAGE:
-        return MaterialPageRoute(builder: (_) => BottomNavFirstPage());
-      case SCREEN1:
-        return MaterialPageRoute(builder: (_) => Screen1());
+        return MaterialPageRoute(builder: (_) => DashBoardScreen());
+      case HOMESCREEN:
+        return MaterialPageRoute(builder: (_) => HomeScreen());
       case SCREEN2:
         return MaterialPageRoute(builder: (_) => Screen2());
       case SCREEN3:
         return MaterialPageRoute(builder: (_) => Screen3());
       case SCREEN4:
         return MaterialPageRoute(builder: (_) => Screen4());
-
+      case SOLUTION:
+        return MaterialPageRoute(builder: (_) => Solution());
+      case QBANK:
+        return MaterialPageRoute(builder: (_) => Questionbank());
+      case QUIZ:
+        return MaterialPageRoute(builder: (_) => DailyQuiz());
+      case DAILYRESULT:
+        return MaterialPageRoute(builder: (_) => DailyResult());
+         case QUIZSOLUTION:
+        return MaterialPageRoute(builder: (_) => QuizSolution());
+      case PRACTICE:
+         return MaterialPageRoute(builder: (_) => LearnersPartice()); 
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

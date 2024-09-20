@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/questionpapertile.dart';
 import 'package:leads/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 

@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leads/constants/assets.dart';
 import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/widget/bullet_list.dart';
-import 'package:leads/presentation/pages/home_screen/account_screen/screen1/widget/card.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/widget/bullet_list.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/widget/card.dart';
 import 'package:leads/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
@@ -20,8 +20,12 @@ class _InstructionsState extends State<Instructions> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Instructions', style: AppTextStyles.h1()),
-      ),
+          title: Text('Instructions', style: AppTextStyles.h1()),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, AppRotes.HOMESCREEN);
+              },
+              icon: Icon(Icons.arrow_back))),
       body: Stack(
         children: [
           SingleChildScrollView(
