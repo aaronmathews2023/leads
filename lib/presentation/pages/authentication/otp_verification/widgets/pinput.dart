@@ -24,7 +24,7 @@ final PinTheme focusedPinTheme = PinTheme(
     fontWeight: FontWeight.w600,
   ),
   decoration: BoxDecoration(
-    border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+    border: Border.all(color: Color.fromRGBO(225, 227, 230, 1)),
     borderRadius: BorderRadius.circular(8),
   ),
 );
@@ -40,6 +40,6 @@ final PinTheme submittedPinTheme = PinTheme(
   decoration: BoxDecoration(
     color: Color.fromRGBO(234, 239, 243, 1),
     borderRadius: BorderRadius.circular(20),
-    border: Border.all(color: Color.fromRGBO(30, 32, 34, 1)),
+    border: Border.all(color: Color.fromRGBO(219, 225, 228, 1)),
   ),
 );

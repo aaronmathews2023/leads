@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leads/constants/assets.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
+import 'package:leads/presentation/pages/dashboard/dash_screen.dart';
 import 'package:leads/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
@@ -15,8 +16,8 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
+    print('   dfasfa');
     return Scaffold(
-      appBar: AppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -32,20 +33,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
           // SvgPicture.asset("")
           Text(
-            "Learn Easy\nDrive Smart!",
+            "Learn Easy Drive Smart!",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20), // You can adjust the font size here
+            style: TextStyle(fontSize: 15), // You can adjust the font size here
           ),
           CustomButton(
             onPressed: () {
-              Navigator.pushNamed(
-                context,
-                AppRotes.HOMESCREEN,
-              );
+              try {
+                // Navigator.pushNamed(
+                //   context,
+                //   AppRotes.BOTTOMFIRSTPPAGE,
+                // );
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (ctx) => DashBoardScreen()));
+              } catch (e) {
+                print(e);
+              }
             },
             label: "Let's GO",
-            color: white,
-            bgcolor: red,
+            color: black,
+            bgcolor: white,
           ),
         ],
       ),

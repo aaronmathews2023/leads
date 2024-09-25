@@ -69,7 +69,8 @@ class ScreenOtpVerify extends StatelessWidget {
             CustomButton(
               label: 'Verify',
               width: size.width * 0.75,
-              color: white,
+              color: black,
+              bgcolor: white,
               onPressed: () {
                 Navigator.pushReplacementNamed(
                   context,

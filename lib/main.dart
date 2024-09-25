@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      theme: ThemeData.dark(),
+      theme:
+          ThemeData.dark().copyWith(scaffoldBackgroundColor: Color(0xff050B10)),
       initialRoute: AppRotes.SPLASH, // Set the initial route
       onGenerateRoute: AppRotes.generateRoute,
     );

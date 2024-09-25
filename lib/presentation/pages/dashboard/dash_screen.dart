@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:leads/bottom_screens/bottom_screens.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/home_screen.dart';
 import 'package:leads/presentation/pages/screen2/screen2.dart';
 import 'package:leads/presentation/pages/screen3/screen3.dart';
 import 'package:leads/presentation/pages/screen4/screen4.dart';
@@ -17,8 +16,8 @@ class DashBoardScreen extends StatefulWidget {
 class _DashBoardScreenState extends State<DashBoardScreen> {
   final List<Widget> pages = [
     HomeScreen(),
-    Screen2(),
-    Screen3(),
+    // Screen2(),
+    // Screen3(),
     Screen4(),
   ];
 
@@ -40,12 +39,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     return Scaffold(
       extendBody: true,
       body: ValueListenableBuilder<int>(
-        valueListenable: currentPage,
-        builder: (context, value, child) => IndexedStack(
-          index: value,
-          children: pages,
-        ),
-      ),
+          valueListenable: currentPage,
+          builder: (context, value, child) => pages[value]
+          // IndexedStack(
+          //   index: value,
+          //   children: pages,
+          // ),
+          ),
       bottomNavigationBar: ValueListenableBuilder<int>(
         valueListenable: currentPage,
         builder: (context, value, child) => bottomNav(context, (index) {

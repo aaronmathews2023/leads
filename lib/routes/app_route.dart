@@ -8,14 +8,19 @@ import 'package:leads/presentation/pages/authentication/splash_screen/splash_scr
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/Solultions/solution.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/daily_quiz/daily_quiz.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/daily_quiz_result/daily_result.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/driving_criteria/driving_certeria.dart';
 
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/exam_result/exam_result.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/forms/forms.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/instructions.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/learners_partice/learners_partice.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/modelexam/modelexam.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/question_paper1/question_paper1.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/questionbank/questionbank.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/quiz_solution/quiz_solution.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/modelexam/quiz_solution/quiz_solution.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/rto_office/rto_office.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/theory_paper/theory_paper.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/websites/website.dart';
 import 'package:leads/presentation/pages/screen2/screen2.dart';
 import 'package:leads/presentation/pages/screen3/screen3.dart';
 import 'package:leads/presentation/pages/screen4/screen4.dart';
@@ -41,8 +46,13 @@ class AppRotes {
   static const String QBANK = '/qbank';
   static const String QUIZ = '/quiz';
   static const String DAILYRESULT = '/dailyresult';
-  static const String QUIZSOLUTION ="/quizsolution";
-  static const String PRACTICE ="/pratice";
+  static const String QUIZSOLUTION = "/quizsolution";
+  static const String PRACTICE = "/pratice";
+  static const String DRIVINGCRITERIA = "/drivingcriteria";
+  static const String FORMS = '/forms';
+  static const String RTOOFFICE = '/rtooffice';
+  static const String WEBSITE = '/website';
+  static const String THEORYPARTICE = '/theorypartice';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -83,10 +93,21 @@ class AppRotes {
         return MaterialPageRoute(builder: (_) => DailyQuiz());
       case DAILYRESULT:
         return MaterialPageRoute(builder: (_) => DailyResult());
-         case QUIZSOLUTION:
+      case QUIZSOLUTION:
         return MaterialPageRoute(builder: (_) => QuizSolution());
       case PRACTICE:
-         return MaterialPageRoute(builder: (_) => LearnersPartice()); 
+        return MaterialPageRoute(builder: (_) => LearnersPartice());
+      case DRIVINGCRITERIA:
+        return MaterialPageRoute(builder: (_) => DrivingCerteria());
+      case FORMS:
+        return MaterialPageRoute(builder: (_) => FromsR());
+      case RTOOFFICE:
+        return MaterialPageRoute(builder: (_) => RtoOffice());
+      case WEBSITE:
+        return MaterialPageRoute(builder: (_) => Website());
+      case THEORYPARTICE:
+        return MaterialPageRoute(builder: (_) => TheoryPaper());
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

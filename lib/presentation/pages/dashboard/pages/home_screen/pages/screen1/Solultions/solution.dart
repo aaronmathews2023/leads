@@ -60,7 +60,7 @@ class _SolutionState extends State<Solution> {
               Spacer(),
               CustomButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRotes.HOMESCREEN);
+                  Navigator.pushNamed(context, AppRotes.BOTTOMFIRSTPPAGE);
                 },
                 label: "Back",
                 bgcolor: white,
