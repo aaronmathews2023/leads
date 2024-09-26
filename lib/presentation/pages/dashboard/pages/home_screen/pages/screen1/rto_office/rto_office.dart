@@ -6,11 +6,11 @@ class RtoOffice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("RTO OFFICE"),
+      ),
       body: Column(
-        children: [
-Text("rto office")
-
-        ],
+        children: [Text("rto office")],
       ),
     );
   }

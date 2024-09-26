@@ -78,6 +78,17 @@ class HomeScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
+                    Navigator.pushNamed(context, AppRotes.QBANK);
+                  },
+                  child: const HomeScreenGridTile(
+                      text2color: Color(0xffFF5F69),
+                      text1: 'QUESTION',
+                      text2: 'BANK',
+                      subtitle: 'Question Bank',
+                      imagePath: 'asset/exam_partice.png'),
+                ),
+                InkWell(
+                  onTap: () {
                     Navigator.pushReplacementNamed(context, AppRotes.MODELEXAM);
                   },
                   child: const HomeScreenGridTile(
@@ -110,17 +121,6 @@ class HomeScreen extends StatelessWidget {
                       text2: 'QUIZ',
                       subtitle: 'Time-bound test similar to Exam',
                       imagePath: 'asset/mark_exam.png'),
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRotes.QBANK);
-                  },
-                  child: const HomeScreenGridTile(
-                      text2color: Color(0xffFF5F69),
-                      text1: 'QUESTION',
-                      text2: 'BANK',
-                      subtitle: 'Question Bank',
-                      imagePath: 'asset/exam_partice.png'),
                 ),
               ],
             ),

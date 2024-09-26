@@ -6,10 +6,13 @@ class FromsR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text("forms")
-        ],
+      appBar: AppBar(
+        title: Text("Forms"),
+      ),
+      body: Center(
+        child: Column(
+          children: [Text("forms")],
+        ),
       ),
     );
   }
