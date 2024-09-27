@@ -3,12 +3,12 @@ import 'package:leads/constants/assets.dart'; // Assuming assets are configured
 import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/textformfield.dart'; // Assuming this contains your custom phone field widget
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 import 'package:leads/validation/common_validation.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -43,27 +43,27 @@ class _LoginScreenState extends State<LoginScreen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   'Log in',
                   style: AppTextStyles.h1()?.copyWith(
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   'Please confirm your country code and enter your phone number.',
                   style: AppTextStyles.h2().copyWith(
                     color: Colors.white70,
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 // Country code and phone number input section
-                Divider(color: Colors.grey),
-                SizedBox(height: 10),
-                Row(
+                const Divider(color: Colors.grey),
+                const SizedBox(height: 10),
+                const Row(
                   children: [
-                    // Flag and country name (replace with actual flag image or widget)
+                   
                     Icon(Icons.flag, color: Colors.white), // Example for flag
                     SizedBox(width: 10),
                     Text(
@@ -72,8 +72,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
-                Divider(color: Colors.grey),
+                const SizedBox(height: 10),
+                const Divider(color: Colors.grey),
                 // Phone number field
                 Form(
                   key: formKey,
@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     if (formKey.currentState?.validate() ?? false) {
                       Navigator.pushNamed(
                         context,
-                        AppRotes.OTPVERIFY,
+                        AppRoutes.OTPVERIFY,
                         arguments: phoneController.text,
                       );
                     }

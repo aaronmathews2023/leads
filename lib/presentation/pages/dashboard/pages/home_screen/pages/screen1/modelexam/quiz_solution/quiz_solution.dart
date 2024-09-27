@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/Solultions/widget/solution_container.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/solultions/widget/solution_container.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class QuizSolution extends StatefulWidget {
@@ -60,7 +60,7 @@ class _QuizSolutionState extends State<QuizSolution> {
               Spacer(),
               CustomButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRotes.BOTTOMFIRSTPPAGE);
+                  Navigator.pushNamed(context, AppRoutes.BOTTOMFIRSTPPAGE);
                 },
                 label: "Back",
                 bgcolor: white,

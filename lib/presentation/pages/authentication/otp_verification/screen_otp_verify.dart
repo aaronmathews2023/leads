@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/otp_verification/widgets/pinput.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 import 'package:pinput/pinput.dart';
@@ -74,7 +74,7 @@ class ScreenOtpVerify extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacementNamed(
                   context,
-                  AppRotes.PRACTICE,
+                  AppRoutes.PRACTICE,
                 );
               },
             ),

@@ -5,7 +5,7 @@ import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/widget/bullet_list.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/widget/card.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class Instructions extends StatefulWidget {
@@ -23,7 +23,7 @@ class _InstructionsState extends State<Instructions> {
           title: Text('Instructions', style: AppTextStyles.h1()),
           leading: IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, AppRotes.HOMESCREEN);
+                Navigator.pushNamed(context, AppRoutes.HOMESCREEN);
               },
               icon: Icon(Icons.arrow_back))),
       body: Stack(
@@ -103,7 +103,7 @@ class _InstructionsState extends State<Instructions> {
                   ),
                   CustomButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, AppRotes.QUESTION);
+                        Navigator.pushNamed(context, AppRoutes.QUESTION);
                       },
                       label: "Start"),
                 ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/question_paper1/widget/option_tile.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class QuestionPaper1 extends StatefulWidget {
@@ -18,7 +18,7 @@ class _QuestionPaper1State extends State<QuestionPaper1> {
           title: const Text("Question Paper 1"),
           leading: IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, AppRotes.INSTRUCTION);
+                Navigator.pushNamed(context, AppRoutes.INSTRUCTION);
               },
               icon: const Icon(Icons.arrow_back)),
           actions: [
@@ -105,7 +105,7 @@ class _QuestionPaper1State extends State<QuestionPaper1> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, AppRotes.EXAMRESULT);
+                      Navigator.pushNamed(context, AppRoutes.EXAMRESULT);
                     },
                     child: const Text("Mark of review",
                         style: TextStyle(color: white)),

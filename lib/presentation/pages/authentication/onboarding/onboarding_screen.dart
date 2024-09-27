@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leads/constants/assets.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/dashboard/dash_screen.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class OnboardingScreen extends StatefulWidget {

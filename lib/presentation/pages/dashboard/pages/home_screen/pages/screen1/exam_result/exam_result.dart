@@ -5,8 +5,7 @@ import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/exam_result/widget/cards.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/exam_result/widget/container.dart';
-
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class ExamResult extends StatefulWidget {
@@ -87,7 +86,7 @@ class _ExamResultState extends State<ExamResult> {
                 style: ElevatedButton.styleFrom(
                     fixedSize: Size.fromWidth(double.maxFinite)),
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRotes.SOLUTION);
+                  Navigator.pushNamed(context, AppRoutes.SOLUTION);
                 },
                 child: const Text("View Solultions",
                     style: TextStyle(color: white)),
@@ -95,7 +94,7 @@ class _ExamResultState extends State<ExamResult> {
               SizedBox(height: 20),
               CustomButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRotes.HOMESCREEN);
+                  Navigator.pushNamed(context, AppRoutes.HOMESCREEN);
                 },
                 label: "Go to Home",
                 bgcolor: white,

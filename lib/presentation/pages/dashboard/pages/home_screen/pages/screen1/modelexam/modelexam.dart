@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class ModelExamsScreen extends StatelessWidget {
@@ -68,7 +68,7 @@ class ModelExamsScreen extends StatelessWidget {
                         height: 48,
                         child: CustomButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, AppRotes.INSTRUCTION);
+                            Navigator.pushNamed(context, AppRoutes.INSTRUCTION);
                           },
                           label: 'Start',
                           color: white,

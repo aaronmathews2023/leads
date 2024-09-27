@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/question_paper1/widget/option_tile.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class DailyQuiz extends StatefulWidget {
@@ -96,7 +96,7 @@ class _DailyQuizState extends State<DailyQuiz> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, AppRotes.DAILYRESULT);
+                    Navigator.pushNamed(context, AppRoutes.DAILYRESULT);
                   },
                   child: const Text("Mark of review",
                       style: TextStyle(color: white)),

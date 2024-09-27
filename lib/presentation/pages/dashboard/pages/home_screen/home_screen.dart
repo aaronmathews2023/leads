@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/widgets/ciricleavatar.dart';
 
-import 'package:leads/routes/app_route.dart';
+
 import 'package:leads/theme/colors.dart';
 
 import 'widgets/grid_tile.dart';
@@ -65,7 +66,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRotes.THEORYPARTICE);
+                    Navigator.pushNamed(context, AppRoutes.THEORYPARTICE);
                   },
                   child: const HomeScreenGridTile(
                     text2color: Color(0xffFF5F69),
@@ -78,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRotes.QBANK);
+                    Navigator.pushNamed(context, AppRoutes.QBANK);
                   },
                   child: const HomeScreenGridTile(
                       text2color: Color(0xffFF5F69),
@@ -89,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushReplacementNamed(context, AppRotes.MODELEXAM);
+                    Navigator.pushReplacementNamed(context, AppRoutes.MODELEXAM);
                   },
                   child: const HomeScreenGridTile(
                     text1: 'MODEL',
@@ -101,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRotes.LOGIN);
+                    Navigator.pushNamed(context, AppRoutes.LOGIN);
                   },
                   child: const HomeScreenGridTile(
                     text2color: Color(0xffFF5F69),
@@ -113,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRotes.QUIZ);
+                    Navigator.pushNamed(context, AppRoutes.QUIZ);
                   },
                   child: const HomeScreenGridTile(
                       text2color: Color(0xff3660B0),
@@ -136,13 +137,13 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) => InkWell(
                 onTap: () {
                   if (index == 0) {
-                    Navigator.pushNamed(context, AppRotes.DRIVINGCRITERIA);
+                    Navigator.pushNamed(context, AppRoutes.DRIVINGCRITERIA);
                   } else if (index == 1) {
-                    Navigator.pushNamed(context, AppRotes.FORMS);
+                    Navigator.pushNamed(context, AppRoutes.FORMS);
                   } else if (index == 2) {
-                    Navigator.pushNamed(context, AppRotes.RTOOFFICE);
+                    Navigator.pushNamed(context, AppRoutes.RTOOFFICE);
                   } else if (index == 3) {
-                    Navigator.pushNamed(context, AppRotes.WEBSITE);
+                    Navigator.pushNamed(context, AppRoutes.WEBSITE);
                   }
                 },
                 child: CiricleAvatarHome(

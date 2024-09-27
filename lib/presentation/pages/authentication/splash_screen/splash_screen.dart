@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 
 import 'package:leads/presentation/pages/authentication/splash_screen/widgets/splash_body_widget/splash_widget.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // Navigate to login page after 6 seconds
     Future.delayed(const Duration(seconds: 6), () {
-      Navigator.pushReplacementNamed(context, AppRotes.BORDING);
+      Navigator.pushReplacementNamed(context, AppRoutes.BORDING);
     });
   }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class CustomButton extends StatelessWidget {

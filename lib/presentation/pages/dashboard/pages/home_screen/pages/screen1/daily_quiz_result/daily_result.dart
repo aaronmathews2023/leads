@@ -4,7 +4,7 @@ import 'package:leads/constants/assets.dart';
 import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/exam_result/widget/cards.dart';
-import 'package:leads/routes/app_route.dart';
+import 'package:leads/core/routes/app_route.dart';
 
 import '../../../../../../../../theme/colors.dart';
 import '../exam_result/widget/container.dart';
@@ -86,7 +86,7 @@ class _DailyResultState extends State<DailyResult> {
               style: ElevatedButton.styleFrom(
                   fixedSize: Size.fromWidth(double.maxFinite)),
               onPressed: () {
-                Navigator.pushNamed(context, AppRotes.QUIZSOLUTION);
+                Navigator.pushNamed(context, AppRoutes.QUIZSOLUTION);
               },
               child:
                   const Text("View Solultions", style: TextStyle(color: white)),
@@ -94,7 +94,7 @@ class _DailyResultState extends State<DailyResult> {
             SizedBox(height: 20),
             CustomButton(
               onPressed: () {
-                Navigator.pushNamed(context, AppRotes.BOTTOMFIRSTPPAGE);
+                Navigator.pushNamed(context, AppRoutes.BOTTOMFIRSTPPAGE);
               },
               label: "Go to Home",
               bgcolor: white,
