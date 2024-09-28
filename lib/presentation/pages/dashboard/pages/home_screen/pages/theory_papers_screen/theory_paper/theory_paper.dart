@@ -45,10 +45,17 @@ scrollController?.dispose();
         body: BlocBuilder<TheoryPaperBloc, TheoryPaperState>(
           builder: (context, state) {
             final theoryList =state.theoryModel?.data?.results;
-            return (( theoryList?.isEmpty??true)  && (state.isLoading))?LoadingAnimationWidget.horizontalRotatingDots(
-                              color: Colors.white,
-                              size: 60.h,
-                            ):  (( theoryList?.isEmpty??true)  && (!state.isLoading)) ?const NoDataIconWidget(): ListView.builder(
+            return (( theoryList?.isEmpty??true)  && (state.isLoading))?Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: LoadingAnimationWidget.horizontalRotatingDots(
+                                    color: Colors.white,
+                                    size: 60.h,
+                                  ),
+                ),
+              ],
+            ):  (( theoryList?.isEmpty??true)  && (!state.isLoading)) ?const NoDataIconWidget(): ListView.builder(
               controller: scrollController,
               shrinkWrap: true,
               itemCount: theoryList?.length??0,
