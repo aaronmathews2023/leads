@@ -13,13 +13,13 @@ import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/scree
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/exam_result/exam_result.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/forms/forms.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/instructions/instructions.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/learners_partice/learners_partice.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/learners_practice_test_screen/learners_practice_screen/learners_practice.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/modelexam/modelexam.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/question_paper1/question_paper1.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/questionbank/questionbank.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/question_bank_screen/questionbank/questionbank.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/modelexam/quiz_solution/quiz_solution.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/rto_office/rto_office.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/theory_paper/theory_paper.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/theory_papers_screen/theory_paper/theory_paper.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/websites/website.dart';
 import 'package:leads/presentation/pages/screen2/screen2.dart';
 import 'package:leads/presentation/pages/screen3/screen3.dart';
@@ -85,7 +85,8 @@ class AppPages {
         return MaterialPageRoute(builder: (_) => const Website());
       case AppRoutes.THEORYPARTICE:
         return MaterialPageRoute(builder: (_) => const TheoryPaper());
-
+    case AppRoutes.DASHBOARD:
+        return MaterialPageRoute(builder: (_) => const DashBoardScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

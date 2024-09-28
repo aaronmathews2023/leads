@@ -16,6 +16,7 @@ class TheoryPaperBloc extends Bloc<TheoryPaperBlocEvent, TheoryPaperState> {
   TheoryPaperBloc() : super(TheoryPaperState.initial()) {
   
   on<GetTheoryEvent>(getTheoryPapersEvent);
+  on<LoadMoreTheoryEvent>(loadMoreTheoryPapersEvent);
   }
     final theoryRepo = TheoryPaperRepo();
 getTheoryPapersEvent(GetTheoryEvent event, Emitter<TheoryPaperState> emit) async {
@@ -31,6 +32,25 @@ emit(state.copyWith(isLoading: false,theoryModel:resp,page: 1,hasMore:(resp.data
     }
   } catch (e) {
     emit(state.copyWith(isLoading: false,page: 1,hasMore: true,isPaginating: false));
+    AppLogger.e(e);
+  }
+}
+loadMoreTheoryPapersEvent(LoadMoreTheoryEvent event, Emitter<TheoryPaperState> emit) async {
+     int page = state.page;
+   page = page+1;
+  try {
+
+    final resp = await theoryRepo.getTheoryPapers(page: page);
+    if(resp !=null && (resp.data?.results?.isNotEmpty??false)){
+        List<TheoryResult>? results = List.from(state.theoryModel?.data?.results??[]);
+        results.addAll(resp.data?.results??[]);
+
+emit(state.copyWith(isLoading: false,theoryModel:state.theoryModel?.copyWith(data: state.theoryModel?.data?.copyWith(results: results)),page: page,hasMore:(resp.data?.next?.isEmpty??true)?false:true,isPaginating:false));
+    }else{
+         emit(state.copyWith(isLoading: false,page: page,hasMore: false,isPaginating: false)); 
+    }
+  } catch (e) {
+    emit(state.copyWith(isLoading: false,page: state.page,hasMore: true,isPaginating: false));
     AppLogger.e(e);
   }
 }

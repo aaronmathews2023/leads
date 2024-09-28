@@ -27,4 +27,5 @@ class AppRoutes {
   static const String RTOOFFICE = '/rtooffice';
   static const String WEBSITE = '/website';
   static const String THEORYPARTICE = '/theorypartice';
+   static const String DASHBOARD = '/dashboard';
 }

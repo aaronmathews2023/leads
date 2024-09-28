@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leads/constants/dimensions.dart';
 
 class CiricleAvatarHome extends StatelessWidget {
   CiricleAvatarHome({super.key, required this.icon, required this.text});
@@ -14,21 +15,19 @@ class CiricleAvatarHome extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 30,
+          backgroundColor: const Color(0xff283138),
           child: Icon(
             icon,
-            color: Color(0xff050B10),
+            color: const Color(0xff050B10),
             size: 30,
           ),
-          backgroundColor: Color(0xff283138),
         ),
-        SizedBox(
-          height: 10,
-        ),
+        kHeight,
         Text(
           text,
           overflow: TextOverflow.clip,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 12),
+          style: const TextStyle(fontSize: 11),
         )
       ],
     );

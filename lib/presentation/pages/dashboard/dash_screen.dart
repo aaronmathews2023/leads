@@ -7,7 +7,7 @@ import 'package:leads/presentation/pages/screen4/screen4.dart';
 import 'pages/home_screen/home_screen.dart';
 
 class DashBoardScreen extends StatefulWidget {
-  DashBoardScreen({super.key});
+const  DashBoardScreen({super.key});
 
   @override
   State<DashBoardScreen> createState() => _DashBoardScreenState();
@@ -46,11 +46,14 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           //   children: pages,
           // ),
           ),
-      bottomNavigationBar: ValueListenableBuilder<int>(
-        valueListenable: currentPage,
-        builder: (context, value, child) => bottomNav(context, (index) {
-          currentPage.value = index;
-        }),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 5),
+        child: ValueListenableBuilder<int>(
+          valueListenable: currentPage,
+          builder: (context, value, child) => bottomNav(context, (index) {
+            currentPage.value = index;
+          }),
+        ),
       ),
     );
   }

@@ -3,8 +3,8 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:leads/constants/assets.dart';
 
 // ignore: camel_case_types
-class loading extends StatelessWidget {
-  const loading({
+class LoadingWidget extends StatelessWidget {
+  const LoadingWidget({
     super.key,
   });
 
@@ -19,8 +19,8 @@ class loading extends StatelessWidget {
     );
   }
 }
-class splash_image extends StatelessWidget {
-  const splash_image({
+class SplashImage extends StatelessWidget {
+  const SplashImage({
     super.key,
   });
 

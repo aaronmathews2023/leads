@@ -31,11 +31,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+
         minTextAdapt: false,
         designSize: const Size(360, 813),
         builder: (context, child) => MultiBlocProvider(
           providers:appBlocProviders ,
           child: MaterialApp(
+            title: "Leads",
               builder: FToastBuilder(),
           debugShowCheckedModeBanner: false,
                 

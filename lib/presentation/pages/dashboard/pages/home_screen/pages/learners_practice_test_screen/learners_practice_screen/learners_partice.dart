@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
-import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/screen1/learners_partice/widget/container_partice.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/learners_practice_test_screen/learners_practice_screen/widget/container_partice.dart';
 
 class LearnersPartice extends StatefulWidget {
   const LearnersPartice({super.key});
