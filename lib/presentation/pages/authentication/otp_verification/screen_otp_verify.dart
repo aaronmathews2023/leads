@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leads/constants/dimensions.dart';
 import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/otp_verification/widgets/pinput.dart';
 import 'package:leads/core/routes/app_route.dart';
@@ -35,7 +36,7 @@ class ScreenOtpVerify extends StatelessWidget {
                     "OTP Verification",
                     style: AppTextStyles.h1(),
                   ),
-                  SizedBox(height: 8),
+   kHeight5,
                   Text(
                     "OTP has been sent to",
                     style: AppTextStyles.h2(),

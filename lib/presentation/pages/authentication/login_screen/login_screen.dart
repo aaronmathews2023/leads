@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leads/constants/assets.dart'; // Assuming assets are configured
+import 'package:leads/constants/dimensions.dart';
 import 'package:leads/core/theme/text_styles/app_text_styles.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/custombutton.dart';
 import 'package:leads/presentation/pages/authentication/login_screen/widgets/textformfield.dart'; // Assuming this contains your custom phone field widget
@@ -43,36 +44,36 @@ class _LoginScreenState extends State<LoginScreen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 20),
+kHeight,
                 Text(
-                  'Log in',
+                  'Log In',
                   style: AppTextStyles.h1()?.copyWith(
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 10),
+         kHeight,
                 Text(
                   'Please confirm your country code and enter your phone number.',
                   style: AppTextStyles.h2().copyWith(
                     color: Colors.white70,
                   ),
                 ),
-                const SizedBox(height: 30),
+               kHeight20,
                 // Country code and phone number input section
                 const Divider(color: Colors.grey),
-                const SizedBox(height: 10),
+           kHeight,
                 const Row(
                   children: [
                    
                     Icon(Icons.flag, color: Colors.white), // Example for flag
-                    SizedBox(width: 10),
+                kWidth10Web,
                     Text(
                       'India',
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+     kHeight,
                 const Divider(color: Colors.grey),
                 // Phone number field
                 Form(

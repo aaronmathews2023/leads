@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors {
   const AppColors._();
  static const Color appBgColor= Color(0xff050B10);
+  static const Color blackBg= Color.fromARGB(131, 5, 11, 16);
   static const Color whitePermenant = Colors.white;
   static const Color blackPermenant = Colors.black;
   static Color get batchSwitch => !isDarkMode
@@ -48,6 +49,7 @@ class AppColors {
   static Color get shimmerGreyMode =>
       isDarkMode ? Colors.black : Colors.grey[100]!;
   static const blueAlt = Color(0xFF2196F3);
+    static const kWhiteLight = Colors.white;
   static const kBlue = Colors.blue;
   static Color get kWhiteBg =>
       !isDarkMode ? const Color.fromRGBO(246, 244, 244, 1) : Colors.grey[600]!;

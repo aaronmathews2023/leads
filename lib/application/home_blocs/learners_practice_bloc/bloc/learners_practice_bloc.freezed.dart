@@ -1749,10 +1749,12 @@ mixin _$LearnersPracticeState {
   bool get hasMore => throw _privateConstructorUsedError;
   List<int> get selectedAnswersIndex => throw _privateConstructorUsedError;
   int get selectedQuestionType => throw _privateConstructorUsedError;
-  dynamic get practiceModel => throw _privateConstructorUsedError;
+  PracticeQuestionModel? get practiceQuestions =>
+      throw _privateConstructorUsedError;
   int get currentQuestionPage => throw _privateConstructorUsedError;
   LearnersPracticeSubmitModel? get practiceSubmitModel =>
       throw _privateConstructorUsedError;
+  bool get isPaginating => throw _privateConstructorUsedError;
 
   /// Create a copy of LearnersPracticeState
   /// with the given fields replaced by the non-null parameter values.
@@ -1773,9 +1775,10 @@ abstract class $LearnersPracticeStateCopyWith<$Res> {
       bool hasMore,
       List<int> selectedAnswersIndex,
       int selectedQuestionType,
-      dynamic practiceModel,
+      PracticeQuestionModel? practiceQuestions,
       int currentQuestionPage,
-      LearnersPracticeSubmitModel? practiceSubmitModel});
+      LearnersPracticeSubmitModel? practiceSubmitModel,
+      bool isPaginating});
 }
 
 /// @nodoc
@@ -1799,9 +1802,10 @@ class _$LearnersPracticeStateCopyWithImpl<$Res,
     Object? hasMore = null,
     Object? selectedAnswersIndex = null,
     Object? selectedQuestionType = null,
-    Object? practiceModel = freezed,
+    Object? practiceQuestions = freezed,
     Object? currentQuestionPage = null,
     Object? practiceSubmitModel = freezed,
+    Object? isPaginating = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -1824,10 +1828,10 @@ class _$LearnersPracticeStateCopyWithImpl<$Res,
           ? _value.selectedQuestionType
           : selectedQuestionType // ignore: cast_nullable_to_non_nullable
               as int,
-      practiceModel: freezed == practiceModel
-          ? _value.practiceModel
-          : practiceModel // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      practiceQuestions: freezed == practiceQuestions
+          ? _value.practiceQuestions
+          : practiceQuestions // ignore: cast_nullable_to_non_nullable
+              as PracticeQuestionModel?,
       currentQuestionPage: null == currentQuestionPage
           ? _value.currentQuestionPage
           : currentQuestionPage // ignore: cast_nullable_to_non_nullable
@@ -1836,6 +1840,10 @@ class _$LearnersPracticeStateCopyWithImpl<$Res,
           ? _value.practiceSubmitModel
           : practiceSubmitModel // ignore: cast_nullable_to_non_nullable
               as LearnersPracticeSubmitModel?,
+      isPaginating: null == isPaginating
+          ? _value.isPaginating
+          : isPaginating // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -1855,9 +1863,10 @@ abstract class _$$LearnersPracticeStateImplCopyWith<$Res>
       bool hasMore,
       List<int> selectedAnswersIndex,
       int selectedQuestionType,
-      dynamic practiceModel,
+      PracticeQuestionModel? practiceQuestions,
       int currentQuestionPage,
-      LearnersPracticeSubmitModel? practiceSubmitModel});
+      LearnersPracticeSubmitModel? practiceSubmitModel,
+      bool isPaginating});
 }
 
 /// @nodoc
@@ -1879,9 +1888,10 @@ class __$$LearnersPracticeStateImplCopyWithImpl<$Res>
     Object? hasMore = null,
     Object? selectedAnswersIndex = null,
     Object? selectedQuestionType = null,
-    Object? practiceModel = freezed,
+    Object? practiceQuestions = freezed,
     Object? currentQuestionPage = null,
     Object? practiceSubmitModel = freezed,
+    Object? isPaginating = null,
   }) {
     return _then(_$LearnersPracticeStateImpl(
       isLoading: null == isLoading
@@ -1904,10 +1914,10 @@ class __$$LearnersPracticeStateImplCopyWithImpl<$Res>
           ? _value.selectedQuestionType
           : selectedQuestionType // ignore: cast_nullable_to_non_nullable
               as int,
-      practiceModel: freezed == practiceModel
-          ? _value.practiceModel
-          : practiceModel // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      practiceQuestions: freezed == practiceQuestions
+          ? _value.practiceQuestions
+          : practiceQuestions // ignore: cast_nullable_to_non_nullable
+              as PracticeQuestionModel?,
       currentQuestionPage: null == currentQuestionPage
           ? _value.currentQuestionPage
           : currentQuestionPage // ignore: cast_nullable_to_non_nullable
@@ -1916,6 +1926,10 @@ class __$$LearnersPracticeStateImplCopyWithImpl<$Res>
           ? _value.practiceSubmitModel
           : practiceSubmitModel // ignore: cast_nullable_to_non_nullable
               as LearnersPracticeSubmitModel?,
+      isPaginating: null == isPaginating
+          ? _value.isPaginating
+          : isPaginating // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1929,9 +1943,10 @@ class _$LearnersPracticeStateImpl implements _LearnersPracticeState {
       required this.hasMore,
       required final List<int> selectedAnswersIndex,
       required this.selectedQuestionType,
-      required this.practiceModel,
+      required this.practiceQuestions,
       required this.currentQuestionPage,
-      required this.practiceSubmitModel})
+      required this.practiceSubmitModel,
+      required this.isPaginating})
       : _selectedAnswersIndex = selectedAnswersIndex;
 
   @override
@@ -1952,15 +1967,17 @@ class _$LearnersPracticeStateImpl implements _LearnersPracticeState {
   @override
   final int selectedQuestionType;
   @override
-  final dynamic practiceModel;
+  final PracticeQuestionModel? practiceQuestions;
   @override
   final int currentQuestionPage;
   @override
   final LearnersPracticeSubmitModel? practiceSubmitModel;
+  @override
+  final bool isPaginating;
 
   @override
   String toString() {
-    return 'LearnersPracticeState(isLoading: $isLoading, page: $page, hasMore: $hasMore, selectedAnswersIndex: $selectedAnswersIndex, selectedQuestionType: $selectedQuestionType, practiceModel: $practiceModel, currentQuestionPage: $currentQuestionPage, practiceSubmitModel: $practiceSubmitModel)';
+    return 'LearnersPracticeState(isLoading: $isLoading, page: $page, hasMore: $hasMore, selectedAnswersIndex: $selectedAnswersIndex, selectedQuestionType: $selectedQuestionType, practiceQuestions: $practiceQuestions, currentQuestionPage: $currentQuestionPage, practiceSubmitModel: $practiceSubmitModel, isPaginating: $isPaginating)';
   }
 
   @override
@@ -1977,11 +1994,13 @@ class _$LearnersPracticeStateImpl implements _LearnersPracticeState {
             (identical(other.selectedQuestionType, selectedQuestionType) ||
                 other.selectedQuestionType == selectedQuestionType) &&
             const DeepCollectionEquality()
-                .equals(other.practiceModel, practiceModel) &&
+                .equals(other.practiceQuestions, practiceQuestions) &&
             (identical(other.currentQuestionPage, currentQuestionPage) ||
                 other.currentQuestionPage == currentQuestionPage) &&
             (identical(other.practiceSubmitModel, practiceSubmitModel) ||
-                other.practiceSubmitModel == practiceSubmitModel));
+                other.practiceSubmitModel == practiceSubmitModel) &&
+            (identical(other.isPaginating, isPaginating) ||
+                other.isPaginating == isPaginating));
   }
 
   @override
@@ -1992,9 +2011,10 @@ class _$LearnersPracticeStateImpl implements _LearnersPracticeState {
       hasMore,
       const DeepCollectionEquality().hash(_selectedAnswersIndex),
       selectedQuestionType,
-      const DeepCollectionEquality().hash(practiceModel),
+      const DeepCollectionEquality().hash(practiceQuestions),
       currentQuestionPage,
-      practiceSubmitModel);
+      practiceSubmitModel,
+      isPaginating);
 
   /// Create a copy of LearnersPracticeState
   /// with the given fields replaced by the non-null parameter values.
@@ -2008,15 +2028,15 @@ class _$LearnersPracticeStateImpl implements _LearnersPracticeState {
 
 abstract class _LearnersPracticeState implements LearnersPracticeState {
   const factory _LearnersPracticeState(
-          {required final bool isLoading,
-          required final int page,
-          required final bool hasMore,
-          required final List<int> selectedAnswersIndex,
-          required final int selectedQuestionType,
-          required final dynamic practiceModel,
-          required final int currentQuestionPage,
-          required final LearnersPracticeSubmitModel? practiceSubmitModel}) =
-      _$LearnersPracticeStateImpl;
+      {required final bool isLoading,
+      required final int page,
+      required final bool hasMore,
+      required final List<int> selectedAnswersIndex,
+      required final int selectedQuestionType,
+      required final PracticeQuestionModel? practiceQuestions,
+      required final int currentQuestionPage,
+      required final LearnersPracticeSubmitModel? practiceSubmitModel,
+      required final bool isPaginating}) = _$LearnersPracticeStateImpl;
 
   @override
   bool get isLoading;
@@ -2029,11 +2049,13 @@ abstract class _LearnersPracticeState implements LearnersPracticeState {
   @override
   int get selectedQuestionType;
   @override
-  dynamic get practiceModel;
+  PracticeQuestionModel? get practiceQuestions;
   @override
   int get currentQuestionPage;
   @override
   LearnersPracticeSubmitModel? get practiceSubmitModel;
+  @override
+  bool get isPaginating;
 
   /// Create a copy of LearnersPracticeState
   /// with the given fields replaced by the non-null parameter values.

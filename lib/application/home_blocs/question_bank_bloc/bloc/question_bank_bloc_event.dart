@@ -6,4 +6,5 @@ class QuestionBankBlocEvent with _$QuestionBankBlocEvent {
     const factory QuestionBankBlocEvent.loadMoreQuestionBank() = LoadMoreQuestionBankEvent;
         const factory QuestionBankBlocEvent.selectQuestionType(int index) = SelectQuestionTypeEvent;
                 const factory QuestionBankBlocEvent.saveQuestionEvent(int index) = SaveQuestionEvent;
+                     const factory QuestionBankBlocEvent.changeIndexEvent(int index) = ChangeIndexEvent;
 }

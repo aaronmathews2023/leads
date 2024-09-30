@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leads/application/home_blocs/theory_paper_bloc/bloc/theory_paper_bloc.dart';
+import 'package:leads/core/theme/text_styles/app_text_styles.dart';
+import 'package:leads/presentation/common/loading_pagination/loading_pagination.dart';
+import 'package:leads/presentation/common/loading_widget/loading_widget.dart';
 import 'package:leads/presentation/common/no_data_icon_widget/no_data_icon.dart';
 import 'package:leads/utils/logger/logger.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -45,41 +48,32 @@ scrollController?.dispose();
         body: BlocBuilder<TheoryPaperBloc, TheoryPaperState>(
           builder: (context, state) {
             final theoryList =state.theoryModel?.data?.results;
-            return (( theoryList?.isEmpty??true)  && (state.isLoading))?Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: LoadingAnimationWidget.horizontalRotatingDots(
-                                    color: Colors.white,
-                                    size: 60.h,
-                                  ),
-                ),
-              ],
-            ):  (( theoryList?.isEmpty??true)  && (!state.isLoading)) ?const NoDataIconWidget(): ListView.builder(
+            return (( theoryList?.isEmpty??true)  && (state.isLoading))?const LoadingIconWidget():  (( theoryList?.isEmpty??true)  && (!state.isLoading)) ?const NoDataIconWidget(): ListView.builder(
               controller: scrollController,
               shrinkWrap: true,
               itemCount: theoryList?.length??0,
               itemBuilder: (context, index) {
 
-                return Column(
-                  children: [
-                    Card(
-                      child: ExpansionTile(
-                        onExpansionChanged: (value){},
-                        maintainState: false,
-                        title: Text(theoryList?[index].title??""),
-                        children: [Text(theoryList?[index].description??"")],
+                return Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 3.0.w,vertical: 2.h),
+                  child: Column(
+                    children: [
+                      Card(
+                        child: ExpansionTile(
+                          onExpansionChanged: (value){},
+                          maintainState: false,
+                          title: Text(theoryList?[index].title??"",style: AppTextStyles.h3().copyWith(fontSize: 13,fontWeight: FontWeight.w900),),
+                          children: [Container(
+                            margin: EdgeInsets.symmetric(horizontal: 2.w,vertical: 5.h),
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(theoryList?[index].description??""),
+                          )],
+                        ),
                       ),
-                    ),
-                    if((index+1)==theoryList?.length && state.isPaginating)
-                    Padding(
-                      padding: const EdgeInsets.only(top:0.0,bottom: 6),
-                      child: LoadingAnimationWidget.horizontalRotatingDots(
-                              color: Colors.white,
-                              size: 60.h,
-                            ),
-                    ),
-                  ],
+                      if((index+1)==theoryList?.length && state.isPaginating)
+                      const LoadingPagination(),
+                    ],
+                  ),
                 );
               },
             );

@@ -23,7 +23,10 @@ getTheoryPapersEvent(GetTheoryEvent event, Emitter<TheoryPaperState> emit) async
   try {
     if(state.theoryModel?.data==null){
     emit(state.copyWith(isLoading: true,page: 1,hasMore:true,isPaginating: true));  
+    }else{
+     emit(state.copyWith(page: 1,hasMore:true,isPaginating: true));
     }
+ 
     final resp = await theoryRepo.getTheoryPapers(page: 1);
     if(resp !=null && (resp.data?.results?.isNotEmpty??false)){
 emit(state.copyWith(isLoading: false,theoryModel:resp,page: 1,hasMore:(resp.data?.next?.isEmpty??true)?false:true,isPaginating:false));
@@ -39,6 +42,9 @@ loadMoreTheoryPapersEvent(LoadMoreTheoryEvent event, Emitter<TheoryPaperState> e
      int page = state.page;
    page = page+1;
   try {
+    if(state.hasMore){
+  emit(state.copyWith(isPaginating: true));
+}
 
     final resp = await theoryRepo.getTheoryPapers(page: page);
     if(resp !=null && (resp.data?.results?.isNotEmpty??false)){
@@ -47,7 +53,7 @@ loadMoreTheoryPapersEvent(LoadMoreTheoryEvent event, Emitter<TheoryPaperState> e
 
 emit(state.copyWith(isLoading: false,theoryModel:state.theoryModel?.copyWith(data: state.theoryModel?.data?.copyWith(results: results)),page: page,hasMore:(resp.data?.next?.isEmpty??true)?false:true,isPaginating:false));
     }else{
-         emit(state.copyWith(isLoading: false,page: page,hasMore: false,isPaginating: false)); 
+         emit(state.copyWith(isLoading: false,hasMore: false,isPaginating: false)); 
     }
   } catch (e) {
     emit(state.copyWith(isLoading: false,page: state.page,hasMore: true,isPaginating: false));

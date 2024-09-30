@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:leads/application/home_blocs/learners_practice_bloc/bloc/learners_practice_bloc.dart';
+import 'package:leads/application/home_blocs/question_bank_bloc/bloc/question_bank_bloc_bloc.dart';
 import 'package:leads/application/home_blocs/theory_paper_bloc/bloc/theory_paper_bloc.dart';
 import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/widgets/ciricleavatar.dart';
@@ -96,6 +98,7 @@ _focusScope.dispose();
                     InkWell(
                       onTap: () {
                                _focusScope.unfocus();
+                                                BlocProvider.of<QuestionBankBlocBloc>(context).add(const GetQuestionBanksEvent());
                         Navigator.pushNamed(context, AppRoutes.QBANK);
                       },
                       child: const HomeScreenGridTile(
@@ -121,7 +124,9 @@ _focusScope.dispose();
                     InkWell(
                       onTap: () {
                                _focusScope.unfocus();
+
                         Navigator.pushNamed(context, AppRoutes.LOGIN);
+                        BlocProvider.of<LearnersPracticeBloc>(context).add(const GetPracticeQuestionsEvent());
                       },
                       child: const HomeScreenGridTile(
                         text2color: Color(0xffFF5F69),

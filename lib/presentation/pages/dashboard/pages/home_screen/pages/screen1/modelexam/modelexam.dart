@@ -4,6 +4,8 @@ import 'package:leads/core/routes/app_route.dart';
 import 'package:leads/theme/colors.dart';
 
 class ModelExamsScreen extends StatelessWidget {
+  const ModelExamsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

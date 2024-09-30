@@ -3,69 +3,55 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leads/application/home_blocs/question_bank_bloc/bloc/question_bank_bloc_bloc.dart';
 import 'package:leads/constants/assets.dart';
+import 'package:leads/constants/dimensions.dart';
+import 'package:leads/core/theme/app_colors/app_colors.dart';
+import 'package:leads/domain/entities/home_screen_model/question_bank_model/question_bank_model.dart';
+import 'package:leads/presentation/common/loading_widget/loading_widget.dart';
 import 'package:leads/presentation/common/no_data_icon_widget/no_data_icon.dart';
 import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/question_bank_screen/questionbank/widget/container_bank.dart';
+import 'package:leads/presentation/pages/dashboard/pages/home_screen/pages/question_bank_screen/questionbank/widget/question_list/question_list.dart';
 import 'package:leads/theme/colors.dart';
+import 'package:leads/utils/logger/logger.dart';
 
-class Questionbank extends StatefulWidget {
+class Questionbank extends StatelessWidget {
   const Questionbank({super.key});
 
   @override
-  State<Questionbank> createState() => _QuestionbankState();
-}
-
-class _QuestionbankState extends State<Questionbank> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      
+ appBar: AppBar(
         title: const Text("Question Bank"),
       ),
       body: BlocBuilder<QuestionBankBlocBloc, QuestionBankBlocState>(
         builder: (context, state) {
-          return state.questionBankModel==null?const NoDataIconWidget(): Column(
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Select Qn Type"),
-                    Icon(Icons.keyboard_arrow_down)
-                  ],
-                ),
-              ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: List.generate(
-                  0,
-                      (index) => Column(
+          final quesBank = state.questionBankModel?.data?.results;
+          return (state.questionBankModel?.data?.results?.isEmpty ?? true) &&
+                  (state.isLoading)
+              ? const LoadingIconWidget()
+              : (state.questionBankModel?.data?.results?.isEmpty ?? true) &&
+                      (!state.isLoading)
+                  ? const NoDataIconWidget()
+                  : Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0, vertical: 5),
+                      child: Column(
                         children: [
-                          const ContainerBank(
-                              question:
-                                  "",
-                              solution:
-                                  "",
-                              number: 1),
-                          const SizedBox(height: 20),
-                          Container(
-                            margin: const EdgeInsets.symmetric(horizontal: 7),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: const Color(0xffD9D9D9).withOpacity(.1)),
-                            height: 150,
-                            width: double.maxFinite,
-                            child: const Center(child: Text("advertisement")),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Select Qn Type"),
+                                Icon(Icons.keyboard_arrow_down)
+                              ],
+                            ),
                           ),
+                          kHeight15,
+                          QuestionsListWidget(quesBank: quesBank),
                         ],
                       ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          );
+                    );
         },
       ),
     );

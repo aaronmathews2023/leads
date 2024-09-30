@@ -22,6 +22,7 @@ mixin _$QuestionBankBlocEvent {
     required TResult Function() loadMoreQuestionBank,
     required TResult Function(int index) selectQuestionType,
     required TResult Function(int index) saveQuestionEvent,
+    required TResult Function(int index) changeIndexEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$QuestionBankBlocEvent {
     TResult? Function()? loadMoreQuestionBank,
     TResult? Function(int index)? selectQuestionType,
     TResult? Function(int index)? saveQuestionEvent,
+    TResult? Function(int index)? changeIndexEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$QuestionBankBlocEvent {
     TResult Function()? loadMoreQuestionBank,
     TResult Function(int index)? selectQuestionType,
     TResult Function(int index)? saveQuestionEvent,
+    TResult Function(int index)? changeIndexEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +51,7 @@ mixin _$QuestionBankBlocEvent {
         loadMoreQuestionBank,
     required TResult Function(SelectQuestionTypeEvent value) selectQuestionType,
     required TResult Function(SaveQuestionEvent value) saveQuestionEvent,
+    required TResult Function(ChangeIndexEvent value) changeIndexEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +60,7 @@ mixin _$QuestionBankBlocEvent {
     TResult? Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult? Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult? Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult? Function(ChangeIndexEvent value)? changeIndexEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +69,7 @@ mixin _$QuestionBankBlocEvent {
     TResult Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult Function(ChangeIndexEvent value)? changeIndexEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -139,6 +145,7 @@ class _$GetQuestionBanksEventImpl implements GetQuestionBanksEvent {
     required TResult Function() loadMoreQuestionBank,
     required TResult Function(int index) selectQuestionType,
     required TResult Function(int index) saveQuestionEvent,
+    required TResult Function(int index) changeIndexEvent,
   }) {
     return getQuestionBanks();
   }
@@ -150,6 +157,7 @@ class _$GetQuestionBanksEventImpl implements GetQuestionBanksEvent {
     TResult? Function()? loadMoreQuestionBank,
     TResult? Function(int index)? selectQuestionType,
     TResult? Function(int index)? saveQuestionEvent,
+    TResult? Function(int index)? changeIndexEvent,
   }) {
     return getQuestionBanks?.call();
   }
@@ -161,6 +169,7 @@ class _$GetQuestionBanksEventImpl implements GetQuestionBanksEvent {
     TResult Function()? loadMoreQuestionBank,
     TResult Function(int index)? selectQuestionType,
     TResult Function(int index)? saveQuestionEvent,
+    TResult Function(int index)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (getQuestionBanks != null) {
@@ -177,6 +186,7 @@ class _$GetQuestionBanksEventImpl implements GetQuestionBanksEvent {
         loadMoreQuestionBank,
     required TResult Function(SelectQuestionTypeEvent value) selectQuestionType,
     required TResult Function(SaveQuestionEvent value) saveQuestionEvent,
+    required TResult Function(ChangeIndexEvent value) changeIndexEvent,
   }) {
     return getQuestionBanks(this);
   }
@@ -188,6 +198,7 @@ class _$GetQuestionBanksEventImpl implements GetQuestionBanksEvent {
     TResult? Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult? Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult? Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult? Function(ChangeIndexEvent value)? changeIndexEvent,
   }) {
     return getQuestionBanks?.call(this);
   }
@@ -199,6 +210,7 @@ class _$GetQuestionBanksEventImpl implements GetQuestionBanksEvent {
     TResult Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult Function(ChangeIndexEvent value)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (getQuestionBanks != null) {
@@ -261,6 +273,7 @@ class _$LoadMoreQuestionBankEventImpl implements LoadMoreQuestionBankEvent {
     required TResult Function() loadMoreQuestionBank,
     required TResult Function(int index) selectQuestionType,
     required TResult Function(int index) saveQuestionEvent,
+    required TResult Function(int index) changeIndexEvent,
   }) {
     return loadMoreQuestionBank();
   }
@@ -272,6 +285,7 @@ class _$LoadMoreQuestionBankEventImpl implements LoadMoreQuestionBankEvent {
     TResult? Function()? loadMoreQuestionBank,
     TResult? Function(int index)? selectQuestionType,
     TResult? Function(int index)? saveQuestionEvent,
+    TResult? Function(int index)? changeIndexEvent,
   }) {
     return loadMoreQuestionBank?.call();
   }
@@ -283,6 +297,7 @@ class _$LoadMoreQuestionBankEventImpl implements LoadMoreQuestionBankEvent {
     TResult Function()? loadMoreQuestionBank,
     TResult Function(int index)? selectQuestionType,
     TResult Function(int index)? saveQuestionEvent,
+    TResult Function(int index)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (loadMoreQuestionBank != null) {
@@ -299,6 +314,7 @@ class _$LoadMoreQuestionBankEventImpl implements LoadMoreQuestionBankEvent {
         loadMoreQuestionBank,
     required TResult Function(SelectQuestionTypeEvent value) selectQuestionType,
     required TResult Function(SaveQuestionEvent value) saveQuestionEvent,
+    required TResult Function(ChangeIndexEvent value) changeIndexEvent,
   }) {
     return loadMoreQuestionBank(this);
   }
@@ -310,6 +326,7 @@ class _$LoadMoreQuestionBankEventImpl implements LoadMoreQuestionBankEvent {
     TResult? Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult? Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult? Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult? Function(ChangeIndexEvent value)? changeIndexEvent,
   }) {
     return loadMoreQuestionBank?.call(this);
   }
@@ -321,6 +338,7 @@ class _$LoadMoreQuestionBankEventImpl implements LoadMoreQuestionBankEvent {
     TResult Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult Function(ChangeIndexEvent value)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (loadMoreQuestionBank != null) {
@@ -410,6 +428,7 @@ class _$SelectQuestionTypeEventImpl implements SelectQuestionTypeEvent {
     required TResult Function() loadMoreQuestionBank,
     required TResult Function(int index) selectQuestionType,
     required TResult Function(int index) saveQuestionEvent,
+    required TResult Function(int index) changeIndexEvent,
   }) {
     return selectQuestionType(index);
   }
@@ -421,6 +440,7 @@ class _$SelectQuestionTypeEventImpl implements SelectQuestionTypeEvent {
     TResult? Function()? loadMoreQuestionBank,
     TResult? Function(int index)? selectQuestionType,
     TResult? Function(int index)? saveQuestionEvent,
+    TResult? Function(int index)? changeIndexEvent,
   }) {
     return selectQuestionType?.call(index);
   }
@@ -432,6 +452,7 @@ class _$SelectQuestionTypeEventImpl implements SelectQuestionTypeEvent {
     TResult Function()? loadMoreQuestionBank,
     TResult Function(int index)? selectQuestionType,
     TResult Function(int index)? saveQuestionEvent,
+    TResult Function(int index)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (selectQuestionType != null) {
@@ -448,6 +469,7 @@ class _$SelectQuestionTypeEventImpl implements SelectQuestionTypeEvent {
         loadMoreQuestionBank,
     required TResult Function(SelectQuestionTypeEvent value) selectQuestionType,
     required TResult Function(SaveQuestionEvent value) saveQuestionEvent,
+    required TResult Function(ChangeIndexEvent value) changeIndexEvent,
   }) {
     return selectQuestionType(this);
   }
@@ -459,6 +481,7 @@ class _$SelectQuestionTypeEventImpl implements SelectQuestionTypeEvent {
     TResult? Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult? Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult? Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult? Function(ChangeIndexEvent value)? changeIndexEvent,
   }) {
     return selectQuestionType?.call(this);
   }
@@ -470,6 +493,7 @@ class _$SelectQuestionTypeEventImpl implements SelectQuestionTypeEvent {
     TResult Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult Function(ChangeIndexEvent value)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (selectQuestionType != null) {
@@ -565,6 +589,7 @@ class _$SaveQuestionEventImpl implements SaveQuestionEvent {
     required TResult Function() loadMoreQuestionBank,
     required TResult Function(int index) selectQuestionType,
     required TResult Function(int index) saveQuestionEvent,
+    required TResult Function(int index) changeIndexEvent,
   }) {
     return saveQuestionEvent(index);
   }
@@ -576,6 +601,7 @@ class _$SaveQuestionEventImpl implements SaveQuestionEvent {
     TResult? Function()? loadMoreQuestionBank,
     TResult? Function(int index)? selectQuestionType,
     TResult? Function(int index)? saveQuestionEvent,
+    TResult? Function(int index)? changeIndexEvent,
   }) {
     return saveQuestionEvent?.call(index);
   }
@@ -587,6 +613,7 @@ class _$SaveQuestionEventImpl implements SaveQuestionEvent {
     TResult Function()? loadMoreQuestionBank,
     TResult Function(int index)? selectQuestionType,
     TResult Function(int index)? saveQuestionEvent,
+    TResult Function(int index)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (saveQuestionEvent != null) {
@@ -603,6 +630,7 @@ class _$SaveQuestionEventImpl implements SaveQuestionEvent {
         loadMoreQuestionBank,
     required TResult Function(SelectQuestionTypeEvent value) selectQuestionType,
     required TResult Function(SaveQuestionEvent value) saveQuestionEvent,
+    required TResult Function(ChangeIndexEvent value) changeIndexEvent,
   }) {
     return saveQuestionEvent(this);
   }
@@ -614,6 +642,7 @@ class _$SaveQuestionEventImpl implements SaveQuestionEvent {
     TResult? Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult? Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult? Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult? Function(ChangeIndexEvent value)? changeIndexEvent,
   }) {
     return saveQuestionEvent?.call(this);
   }
@@ -625,6 +654,7 @@ class _$SaveQuestionEventImpl implements SaveQuestionEvent {
     TResult Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
     TResult Function(SelectQuestionTypeEvent value)? selectQuestionType,
     TResult Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult Function(ChangeIndexEvent value)? changeIndexEvent,
     required TResult orElse(),
   }) {
     if (saveQuestionEvent != null) {
@@ -647,13 +677,176 @@ abstract class SaveQuestionEvent implements QuestionBankBlocEvent {
 }
 
 /// @nodoc
+abstract class _$$ChangeIndexEventImplCopyWith<$Res> {
+  factory _$$ChangeIndexEventImplCopyWith(_$ChangeIndexEventImpl value,
+          $Res Function(_$ChangeIndexEventImpl) then) =
+      __$$ChangeIndexEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$ChangeIndexEventImplCopyWithImpl<$Res>
+    extends _$QuestionBankBlocEventCopyWithImpl<$Res, _$ChangeIndexEventImpl>
+    implements _$$ChangeIndexEventImplCopyWith<$Res> {
+  __$$ChangeIndexEventImplCopyWithImpl(_$ChangeIndexEventImpl _value,
+      $Res Function(_$ChangeIndexEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of QuestionBankBlocEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$ChangeIndexEventImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeIndexEventImpl implements ChangeIndexEvent {
+  const _$ChangeIndexEventImpl(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'QuestionBankBlocEvent.changeIndexEvent(index: $index)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeIndexEventImpl &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  /// Create a copy of QuestionBankBlocEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeIndexEventImplCopyWith<_$ChangeIndexEventImpl> get copyWith =>
+      __$$ChangeIndexEventImplCopyWithImpl<_$ChangeIndexEventImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getQuestionBanks,
+    required TResult Function() loadMoreQuestionBank,
+    required TResult Function(int index) selectQuestionType,
+    required TResult Function(int index) saveQuestionEvent,
+    required TResult Function(int index) changeIndexEvent,
+  }) {
+    return changeIndexEvent(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getQuestionBanks,
+    TResult? Function()? loadMoreQuestionBank,
+    TResult? Function(int index)? selectQuestionType,
+    TResult? Function(int index)? saveQuestionEvent,
+    TResult? Function(int index)? changeIndexEvent,
+  }) {
+    return changeIndexEvent?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getQuestionBanks,
+    TResult Function()? loadMoreQuestionBank,
+    TResult Function(int index)? selectQuestionType,
+    TResult Function(int index)? saveQuestionEvent,
+    TResult Function(int index)? changeIndexEvent,
+    required TResult orElse(),
+  }) {
+    if (changeIndexEvent != null) {
+      return changeIndexEvent(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetQuestionBanksEvent value) getQuestionBanks,
+    required TResult Function(LoadMoreQuestionBankEvent value)
+        loadMoreQuestionBank,
+    required TResult Function(SelectQuestionTypeEvent value) selectQuestionType,
+    required TResult Function(SaveQuestionEvent value) saveQuestionEvent,
+    required TResult Function(ChangeIndexEvent value) changeIndexEvent,
+  }) {
+    return changeIndexEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetQuestionBanksEvent value)? getQuestionBanks,
+    TResult? Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
+    TResult? Function(SelectQuestionTypeEvent value)? selectQuestionType,
+    TResult? Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult? Function(ChangeIndexEvent value)? changeIndexEvent,
+  }) {
+    return changeIndexEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetQuestionBanksEvent value)? getQuestionBanks,
+    TResult Function(LoadMoreQuestionBankEvent value)? loadMoreQuestionBank,
+    TResult Function(SelectQuestionTypeEvent value)? selectQuestionType,
+    TResult Function(SaveQuestionEvent value)? saveQuestionEvent,
+    TResult Function(ChangeIndexEvent value)? changeIndexEvent,
+    required TResult orElse(),
+  }) {
+    if (changeIndexEvent != null) {
+      return changeIndexEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeIndexEvent implements QuestionBankBlocEvent {
+  const factory ChangeIndexEvent(final int index) = _$ChangeIndexEventImpl;
+
+  int get index;
+
+  /// Create a copy of QuestionBankBlocEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeIndexEventImplCopyWith<_$ChangeIndexEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$QuestionBankBlocState {
   bool get isLoading => throw _privateConstructorUsedError;
   int get page => throw _privateConstructorUsedError;
   bool get hasMore => throw _privateConstructorUsedError;
-  dynamic get questionBankModel => throw _privateConstructorUsedError;
+  QuestionBankModel? get questionBankModel =>
+      throw _privateConstructorUsedError;
   List<String> get questionTypeLists => throw _privateConstructorUsedError;
   int get selectedQuestionType => throw _privateConstructorUsedError;
+  int get selectedIndex => throw _privateConstructorUsedError;
+  bool get isPagination => throw _privateConstructorUsedError;
 
   /// Create a copy of QuestionBankBlocState
   /// with the given fields replaced by the non-null parameter values.
@@ -672,9 +865,11 @@ abstract class $QuestionBankBlocStateCopyWith<$Res> {
       {bool isLoading,
       int page,
       bool hasMore,
-      dynamic questionBankModel,
+      QuestionBankModel? questionBankModel,
       List<String> questionTypeLists,
-      int selectedQuestionType});
+      int selectedQuestionType,
+      int selectedIndex,
+      bool isPagination});
 }
 
 /// @nodoc
@@ -699,6 +894,8 @@ class _$QuestionBankBlocStateCopyWithImpl<$Res,
     Object? questionBankModel = freezed,
     Object? questionTypeLists = null,
     Object? selectedQuestionType = null,
+    Object? selectedIndex = null,
+    Object? isPagination = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -716,7 +913,7 @@ class _$QuestionBankBlocStateCopyWithImpl<$Res,
       questionBankModel: freezed == questionBankModel
           ? _value.questionBankModel
           : questionBankModel // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as QuestionBankModel?,
       questionTypeLists: null == questionTypeLists
           ? _value.questionTypeLists
           : questionTypeLists // ignore: cast_nullable_to_non_nullable
@@ -725,6 +922,14 @@ class _$QuestionBankBlocStateCopyWithImpl<$Res,
           ? _value.selectedQuestionType
           : selectedQuestionType // ignore: cast_nullable_to_non_nullable
               as int,
+      selectedIndex: null == selectedIndex
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      isPagination: null == isPagination
+          ? _value.isPagination
+          : isPagination // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -742,9 +947,11 @@ abstract class _$$QuestionBankBlocStateImplCopyWith<$Res>
       {bool isLoading,
       int page,
       bool hasMore,
-      dynamic questionBankModel,
+      QuestionBankModel? questionBankModel,
       List<String> questionTypeLists,
-      int selectedQuestionType});
+      int selectedQuestionType,
+      int selectedIndex,
+      bool isPagination});
 }
 
 /// @nodoc
@@ -767,6 +974,8 @@ class __$$QuestionBankBlocStateImplCopyWithImpl<$Res>
     Object? questionBankModel = freezed,
     Object? questionTypeLists = null,
     Object? selectedQuestionType = null,
+    Object? selectedIndex = null,
+    Object? isPagination = null,
   }) {
     return _then(_$QuestionBankBlocStateImpl(
       isLoading: null == isLoading
@@ -784,7 +993,7 @@ class __$$QuestionBankBlocStateImplCopyWithImpl<$Res>
       questionBankModel: freezed == questionBankModel
           ? _value.questionBankModel
           : questionBankModel // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as QuestionBankModel?,
       questionTypeLists: null == questionTypeLists
           ? _value._questionTypeLists
           : questionTypeLists // ignore: cast_nullable_to_non_nullable
@@ -793,6 +1002,14 @@ class __$$QuestionBankBlocStateImplCopyWithImpl<$Res>
           ? _value.selectedQuestionType
           : selectedQuestionType // ignore: cast_nullable_to_non_nullable
               as int,
+      selectedIndex: null == selectedIndex
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      isPagination: null == isPagination
+          ? _value.isPagination
+          : isPagination // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -806,7 +1023,9 @@ class _$QuestionBankBlocStateImpl implements _QuestionBankBlocState {
       required this.hasMore,
       required this.questionBankModel,
       required final List<String> questionTypeLists,
-      required this.selectedQuestionType})
+      required this.selectedQuestionType,
+      required this.selectedIndex,
+      required this.isPagination})
       : _questionTypeLists = questionTypeLists;
 
   @override
@@ -816,7 +1035,7 @@ class _$QuestionBankBlocStateImpl implements _QuestionBankBlocState {
   @override
   final bool hasMore;
   @override
-  final dynamic questionBankModel;
+  final QuestionBankModel? questionBankModel;
   final List<String> _questionTypeLists;
   @override
   List<String> get questionTypeLists {
@@ -828,10 +1047,14 @@ class _$QuestionBankBlocStateImpl implements _QuestionBankBlocState {
 
   @override
   final int selectedQuestionType;
+  @override
+  final int selectedIndex;
+  @override
+  final bool isPagination;
 
   @override
   String toString() {
-    return 'QuestionBankBlocState(isLoading: $isLoading, page: $page, hasMore: $hasMore, questionBankModel: $questionBankModel, questionTypeLists: $questionTypeLists, selectedQuestionType: $selectedQuestionType)';
+    return 'QuestionBankBlocState(isLoading: $isLoading, page: $page, hasMore: $hasMore, questionBankModel: $questionBankModel, questionTypeLists: $questionTypeLists, selectedQuestionType: $selectedQuestionType, selectedIndex: $selectedIndex, isPagination: $isPagination)';
   }
 
   @override
@@ -843,12 +1066,16 @@ class _$QuestionBankBlocStateImpl implements _QuestionBankBlocState {
                 other.isLoading == isLoading) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.hasMore, hasMore) || other.hasMore == hasMore) &&
-            const DeepCollectionEquality()
-                .equals(other.questionBankModel, questionBankModel) &&
+            (identical(other.questionBankModel, questionBankModel) ||
+                other.questionBankModel == questionBankModel) &&
             const DeepCollectionEquality()
                 .equals(other._questionTypeLists, _questionTypeLists) &&
             (identical(other.selectedQuestionType, selectedQuestionType) ||
-                other.selectedQuestionType == selectedQuestionType));
+                other.selectedQuestionType == selectedQuestionType) &&
+            (identical(other.selectedIndex, selectedIndex) ||
+                other.selectedIndex == selectedIndex) &&
+            (identical(other.isPagination, isPagination) ||
+                other.isPagination == isPagination));
   }
 
   @override
@@ -857,9 +1084,11 @@ class _$QuestionBankBlocStateImpl implements _QuestionBankBlocState {
       isLoading,
       page,
       hasMore,
-      const DeepCollectionEquality().hash(questionBankModel),
+      questionBankModel,
       const DeepCollectionEquality().hash(_questionTypeLists),
-      selectedQuestionType);
+      selectedQuestionType,
+      selectedIndex,
+      isPagination);
 
   /// Create a copy of QuestionBankBlocState
   /// with the given fields replaced by the non-null parameter values.
@@ -876,9 +1105,11 @@ abstract class _QuestionBankBlocState implements QuestionBankBlocState {
       {required final bool isLoading,
       required final int page,
       required final bool hasMore,
-      required final dynamic questionBankModel,
+      required final QuestionBankModel? questionBankModel,
       required final List<String> questionTypeLists,
-      required final int selectedQuestionType}) = _$QuestionBankBlocStateImpl;
+      required final int selectedQuestionType,
+      required final int selectedIndex,
+      required final bool isPagination}) = _$QuestionBankBlocStateImpl;
 
   @override
   bool get isLoading;
@@ -887,11 +1118,15 @@ abstract class _QuestionBankBlocState implements QuestionBankBlocState {
   @override
   bool get hasMore;
   @override
-  dynamic get questionBankModel;
+  QuestionBankModel? get questionBankModel;
   @override
   List<String> get questionTypeLists;
   @override
   int get selectedQuestionType;
+  @override
+  int get selectedIndex;
+  @override
+  bool get isPagination;
 
   /// Create a copy of QuestionBankBlocState
   /// with the given fields replaced by the non-null parameter values.

@@ -35,7 +35,7 @@ class AppPages {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutes.SPLASH:
-        return MaterialPageRoute(builder: (_) => SplashScreen());
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
       case AppRoutes.MODELEXAM:
         return MaterialPageRoute(builder: (_) => ModelExamsScreen());
       case AppRoutes.BORDING:
@@ -54,9 +54,9 @@ class AppPages {
       case AppRoutes.EXAMRESULT:
         return MaterialPageRoute(builder: (_) => const ExamResult());
       case AppRoutes.BOTTOMFIRSTPPAGE:
-        return MaterialPageRoute(builder: (_) => DashBoardScreen());
+        return MaterialPageRoute(builder: (_) => const DashBoardScreen());
       case AppRoutes.HOMESCREEN:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case AppRoutes.SCREEN2:
         return MaterialPageRoute(builder: (_) => const Screen2());
       case AppRoutes.SCREEN3:
